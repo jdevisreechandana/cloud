@@ -1,0 +1,14 @@
+body {
+  font-family: sans-serif;
+  margin: 20px;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+input {
+  margin-bottom: 10px;
+  padding: 5px;
+}

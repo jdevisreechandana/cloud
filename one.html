@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Firebase Demo3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Application</h1>
+
+    <div id="login-form">
+        <h2>Login</h2>
+        <input type="email" id="email" placeholder="Email"><br>
+        <input type="password" id="password" placeholder="Password"><br>
+        <button id="login-btn">Login</button>
+        <button id="signup-btn">Sign Up</button>
+        <div id="login-error" class="error"></div>
+    </div>
+
+    <div id="address-form" style="display: none;">
+        <h2>Enter Your Address</h2>
+        <input type="text" id="street" placeholder="Street"><br>
+        <input type="text" id="city" placeholder="City"><br>
+        <input type="text" id="state" placeholder="State"><br>
+        <input type="text" id="zip" placeholder="Zip"><br>
+        <button id="save-address-btn">Save Address</button>
+        <button id="logout-btn-saved">Logout</button>
+        <div id="address-error" class="error"></div>
+    </div>
+
+    <div id="address-display" style="display: none;">
+        <h2>Your Saved Address:</h2>
+        <div id="address-content"></div>
+        <button id="logout-btn">Logout</button>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore-compat.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
