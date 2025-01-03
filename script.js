@@ -41,7 +41,8 @@ function checkAddressAndUpdateUI(userId) {
     .then((doc) => {
       if (doc.exists) {
         const address = doc.data();
-        addressContent.textContent = `Street: ${address.street}, City: ${address.city}, State: ${address.state}, Zip: ${address.zip}`;
+        //Added new element "secret"
+        addressContent.textContent = `Secret: ${address.secret},Street: ${address.street}, City: ${address.city}, State: ${address.state}, Zip: ${address.zip}`;
         addressForm.style.display = 'none';
         addressDisplay.style.display = 'block';
       } else {
@@ -55,12 +56,14 @@ function checkAddressAndUpdateUI(userId) {
 }
 
 saveAddressBtn.addEventListener('click', () => {
+  //Added new element "secret"
+  const secret = document.getElementById('secret').value;
   const street = document.getElementById('street').value;
   const city = document.getElementById('city').value;
   const state = document.getElementById('state').value;
   const zip = document.getElementById('zip').value;
 
-  const address = { street, city, state, zip };
+  const address = { secret,street, city, state, zip }; //Added new element "secret"
 
   const user = auth.currentUser;
   if (user) {
